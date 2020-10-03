@@ -21,6 +21,10 @@ private:
 	// year station resource month
 	std::vector<entry> entries;
 	
+	// What can be done as of right now I think
+	//Collection<Category<int, entry>, Category<std::string, entry>, Category<std::string, entry>, Category<int, entry>> categories;
+	// What I want it to look like
+	//Collection<entry, int, std::string, std::string, int> categories;
 	Category<int, entry> years;
 	Category<std::string, entry> stations;
 	Category<std::string, entry> resources;

@@ -4,6 +4,8 @@
 #include <unordered_map>
 #include <vector>
 
+#include <tuple>
+
 // I originally had the value type hardcoded to an entry
 // But I thought it would be worth it to abstract it that
 // much more so it could be used for more than just entries.
@@ -31,15 +33,11 @@ private:
 	//friend class Collection<V>;
 };
 
-// I'm trying to abstract this like a std::tuple is
-// so that I can have a Collection of anything
-/*
-template<typename V>
-class Collection;
+template<typename... TS>
+class Collection : public std::tuple<TS...>
+{
 
-template<typename V, typename... T>
-class Collection : public Collection<T...>;
-*/
+};
 
 #endif
 
