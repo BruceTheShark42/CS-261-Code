@@ -6,12 +6,12 @@
 class reporter
 {
 public:
-	reporter(const productiondb& db);
+	reporter(productiondb& db);
 	
 	void printFullReport(int year);
 	void printStationReport(int year);
 private:
-	productiondb db;
+	productiondb& db;
 	
 	static constexpr const char* fileName = "generated_report.txt";
 };

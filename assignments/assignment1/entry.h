@@ -8,11 +8,6 @@ class entry
 public:
 	entry(int year, int month, int day, const std::string& station, const std::string& resource, int amount);
 	
-	// Needed for being in a std::unordered_map
-	entry() = default;
-	entry(const entry& e);
-	entry& operator=(const entry& e);
-	
 	inline int getYear() const noexcept { return year; }
 	inline int getMonth() const noexcept { return month; }
 	inline int getDay() const noexcept { return day; }
