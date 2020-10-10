@@ -1,13 +1,16 @@
 #include "productiondb.h"
 #include <algorithm>
-#include <iostream>
 
 productiondb::productiondb(const productiondb& db)
 	: entries(db.entries) {}
 
-std::vector<Station> productiondb::getStations(int year)
+std::vector<Storage<Resource>> productiondb::getStations(int year) const
 {
-	std::vector<Station> stations;
+	// If I had more time, which is not your fault
+	// in the slightest, I would convert this to
+	// use a std::map just like getTotals so it
+	// would be that much simpler.
+	std::vector<Storage<Resource>> stations;
 	
 	for (const auto& entry : entries)
 	{
@@ -33,9 +36,9 @@ std::vector<Station> productiondb::getStations(int year)
 			auto& resource = entry.getResource();
 			if (entry.getAmount() != 0)
 			{
-				if (!station->hasResource(resource))
-					station->addResource(resource);
-				station->getResource(resource).setMonth(entry.getMonth(), entry.getAmount());
+				if (!station->has(resource))
+					station->add(resource);
+				station->get(resource).addToMonth(entry.getMonth(), entry.getAmount());
 			}
 		}
 	}
@@ -43,10 +46,21 @@ std::vector<Station> productiondb::getStations(int year)
 	std::sort(stations.begin(), stations.end());
 	for (auto& station : stations)
 	{
-		auto& resources = station.getResources();
+		auto& resources = station.get();
 		std::sort(resources.begin(), resources.end());
 	}
 	
 	return stations;
+}
+
+productiondb::TotalResources productiondb::getTotals(int year) const
+{
+	TotalResources resources;
+	
+	for (const auto& entry : entries)
+		if (entry.getYear() == year)
+			resources[entry.getResource()][entry.getStation()] += entry.getAmount();
+	
+	return resources;
 }
 
