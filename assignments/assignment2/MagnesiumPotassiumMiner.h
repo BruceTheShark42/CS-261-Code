@@ -7,7 +7,7 @@ class MagnesiumPotassiumMiner : public GenericMiner
 {
 public:
 	MagnesiumPotassiumMiner(int id, const std::string& resource);
-	virtual void detect(std::ofstream& file) const override;
+	virtual void detect() const override;
 };
 
 #endif

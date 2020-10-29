@@ -1,11 +1,12 @@
 #include "SodiumChlorideMiner.h"
+#include <iostream>
 
 SodiumChlorideMiner::SodiumChlorideMiner(int id, const std::string& resource)
 	: GenericMiner(id, resource) {}
 
-void SodiumChlorideMiner::detect(std::ofstream& file) const
+void SodiumChlorideMiner::detect() const
 {
-	file << "Steam blasting...\n"
-			"Salinity detector activated.\n"
-			"Concentration vector of NaCl detected.";
+	std::cout << "Steam blasting...\n"
+				 "Salinity detector activated.\n"
+				 "Concentration vector of NaCl detected.";
 }

@@ -8,7 +8,7 @@ class GenericMiner : public Miner
 public:
 	GenericMiner(int id, const std::string& resource);
 	
-	virtual void collect(std::ofstream& file) const override;
+	virtual void collect() const override;
 };
 
 #endif

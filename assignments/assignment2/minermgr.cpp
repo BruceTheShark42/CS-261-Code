@@ -1,22 +1,13 @@
 #include "minermgr.h"
 
 #include <iostream>
+#include <fstream>
 
 #include "WaterMiner.h"
 #include "SodiumChlorideMiner.h"
 #include "IronMiner.h"
 #include "SiliconMiner.h"
 #include "MagnesiumPotassiumMiner.h"
-
-minermgr::minermgr()
-{
-	std::ifstream inFile(fileName);
-	if (inFile.is_open())
-	{
-		std::cout << "Warning: \"" << fileName << "\" already exists. It will be overwritten.\n";
-		inFile.close();
-	}
-}
 
 minermgr::~minermgr()
 {
@@ -31,38 +22,27 @@ void minermgr::addMiner(int id, const std::string& resource)
 
 void minermgr::runMiners() const
 {
-	bool success = false;
-	std::ofstream file(fileName);
+	std::cout << "== Boston Station Miner Manager ==\n"
+			"\n"
+			"Authenticating with Van Halen facilities...\n"
+			"Connected and registered.";
 	
-	if (file.is_open())
+	for (const auto miner : miners)
 	{
-		file << "== Boston Station Miner Manager ==\n"
-				"\n"
-				"Authenticating with Van Halen facilities...\n"
-				"Connected and registered.";
-		
-		for (const auto miner : miners)
-		{
-			file << "\n=======\n== Command: start\n";
-			miner->start(file);
-			file << "\n== Command: detect\n";
-			miner->detect(file);
-			file << "\n== Command: collect\n";
-			miner->collect(file);
-			file << "\n== Command: stop\n";
-			miner->stop(file);
-		}
-		
-		// For whatever reason, there's an invisible
-		// newline character at the end of output1000.txt,
-		// so I have to mimic that here.
-		file << '\n';
-		
-		file.close();
-		success = true;
+		std::cout << "\n=======\n== Command: start\n";
+		miner->start();
+		std::cout << "\n== Command: detect\n";
+		miner->detect();
+		std::cout << "\n== Command: collect\n";
+		miner->collect();
+		std::cout << "\n== Command: stop\n";
+		miner->stop();
 	}
 	
-	std::cout << (success ? "Successfully wrote" : "Failed to write") << " miner report to: \"" << fileName << "\"\n";
+	// For whatever reason, there's an invisible
+	// newline character at the end of output1000.txt,
+	// so I have to mimic that here.
+	std::cout << '\n';
 }
 
 Miner* minermgr::determineMinerType(int id, const std::string& resource) const

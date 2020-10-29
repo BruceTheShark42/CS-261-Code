@@ -1,11 +1,12 @@
 #include "MagnesiumPotassiumMiner.h"
+#include <iostream>
 
 MagnesiumPotassiumMiner::MagnesiumPotassiumMiner(int id, const std::string& resource)
 	: GenericMiner(id, resource) {}
 
-void MagnesiumPotassiumMiner::detect(std::ofstream& file) const
+void MagnesiumPotassiumMiner::detect() const
 {
-	file << "Releasing oxygen...\n"
-			"Thermal detector activated.\n"
-			"Flammable reaction detected.";
+	std::cout << "Releasing oxygen...\n"
+				 "Thermal detector activated.\n"
+				 "Flammable reaction detected.";
 }
