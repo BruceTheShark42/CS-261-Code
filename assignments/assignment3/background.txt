@@ -1,0 +1,67 @@
+The room sat in shocked silence after hearing the report. Addie looked around
+at the faces. Goliss was sitting next to her, a grim look on her face, but the
+rest of the committee were mostly strangers. They were the big wigs from the
+Mars Health Organization.
+
+After Williams' confession of people dying at his station, the MHO had stepped
+in and started asking questions and taking samples and making his life
+miserable. The result, that they had just now reported, was that nearly all of
+Boston's mining robots had some sort of biological contamination on the
+outside shell. And it wasn't just random sludge, it was a nasty
+bacteria. Deadly to humans.
+
+At this was discovery a hazmat encased team descended on the robots and
+collected hundreds of thousands of samples. In their labs they were able to
+generate DNA sequences.
+
+A large and hairy man stood up. "Now the real work begins." Jim Creek was the
+chief scientist for MHO. He continued. "We have the DNA sequences for all of
+the dangerous bacteria in our database. As expected, all of the strands are
+different. These bacteria evolve and mutate at an incredible rate. However, we
+believe that if we can find common gene sequences between all of these, then
+we can engineer an antibiotic to counteract their effect on people."
+
+Nods of understanding came from the majority of those sitting at the table.
+
+"But that's the problem," Jim said. "We literally have one hundred thousand
+strands of DNA. It will take us many months of tedious labor to manually find
+the gene subsequences." He turned to Goliss.
+
+"Assistant Director Goliss, I understand that you have a highly skilled
+programmer that might be able to help us here." He shifted his gaze to Addie. "Is
+that you?"
+
+She nodded and smiled in acknowledgement, if not a bit nervous.
+
+"Good! So do you understand the problem? Can you help?"
+
+Before Addie could respond Goliss jumped in. "Mister Creek, yes, this is my
+programmer. I'm sure that we will do everything we can to help but this
+problem might be a little too hard for us. We can't commit to it just
+yet. Please send us the database and we'll look at it and get back to you."
+
+Jim glared at Goliss for a moment and then softened his look. "Of course, I
+understand. This is a difficult problem. But it is also urgent and
+important. We need to find those subsequences. Every day, and I mean every
+day, that we don't have a solution for this problem, people are dying. Please,
+work on this as quickly as you can." Jim looked like he was about to pound his
+fist on the table but then he stopped himself.
+
+"Yes Mister Creek, we will do our best."
+
+Goliss ushered Addie out of the room and found a place in the hallway where no
+one was too close to them. "I hope you can do this. As soon as I get the
+database I'll send it to you and then I need you to work on it. Can you?"
+
+"No problem," Addie replied. "I've recently been learning a new programming
+language, it's called Java, and this problem should be a peice of cake with
+that new language." She started to explain some of the details of Java but
+then Goliss stopped her. "You see? This is why I am so glad to have you. I
+have no idea what you're talking about but I know that you do. I'll send you
+the data as soon as I get it. For now, I need to head down to Alabama to work
+out some issues they are having."
+
+She lead Addie to a transport which would take her back to her
+workstation. Yes another crisis on Mars. Addie was sure she could solve the
+problem.
+
