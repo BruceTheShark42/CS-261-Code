@@ -1,0 +1,57 @@
+For this proficiency test you will write a program that works with a binary
+search tree.
+
+**** Important Note ****
+
+This is a timed exam. You have exactly 60 minutes from the time you get the
+exam files to turn in the exam. If you exceed this time limit then I will not
+be able to accept your exam and you will get a 0. This is a very strict time
+limit and it is your responsibility to manage the time.
+
+************************
+
+File supplied.o contains code that can build, display, duplicate, and destroy
+a binary search tree.
+
+For this test, you will need to write the following function in table.cpp and
+table.h. You will also need to update main.cpp to declare variables and call
+the functions that you write. 
+
+    int copyToArray(node * root, int intArray[])	
+
+    Recursively copy all the items in the tree to intArray and return the number
+    of items copied. The values in the intArray need to be in ascending order.
+
+    void copyNonLeaf(node * root, node *& newRoot)	
+
+    Recursively copy all the non-leaf nodes from the source tree into a new
+    tree. The destination tree should only contain the non-leaf nodes from the
+    source tree. The destination tree should also be a BST.
+
+Run your program in valgrind and make sure there are no memory errors or
+memory leaks. Assuming the executable file is named main then you could run
+valgrind like this:
+
+valgrind --tool=memcheck --leak-check=full ./main
+
+For test submission, use tar to combine your files into a single bundle:
+
+tar cvf final_files.tar main.cpp table.cpp table.h
+
+After that, use the 'turnin' program to turnin the tar file.
+
+~mike.noel/bin/turnin cs261 final_files.tar
+
+If you do not turn in ALL of your source files or if I'm unable to compile the
+code you submit then you will receive a very low score on the final exam.
+
+The grading criteria are:
+
+5pts The program compiles
+3pts The program runs without crashing or hanging
+2pts No memory errors or memory leaks
+5pts Correct functionality (2pts for copyToArray, 3pts for copyNonLeaf)
+5pts Recursive implementation (2pts for copyToArray, 3pts for copyNonLeaf)
+
+You can get partial credit so be sure to turn in whatever you have by the end
+of the testing time period.
